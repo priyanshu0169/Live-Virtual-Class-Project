@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Live Virtual Class</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #e9f2f7;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.gallery-head{
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+
+.gallery-table{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 75%;
+    min-width: 325px;
+    color: white;
+    margin-bottom: 5vh;
+}
+
+td, th{
+    text-align: center;
+    vertical-align: middle;
+}
+
+th{
+    padding: 10px 0px;
+    background-color: gray;
+    font-size: 22px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+td{
+    background-color: darkgray;
+    font-size: 18px;
+    filter: drop-shadow(4px 4px 4px black);
+}
+
+.name:hover{
+    cursor: grab;
+    background-color: black;
+}
+
+.passport-img{
+    width: 80px;
+
+}
+td img{
+    border-radius: 10px;
+}
+td iframe{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+</style>
+    </head>
+
+    <body>
+        <header class="gallery-head">
+            <h1>Photo Gallery</h1>
+        </header>
+
+        <section>
+            <article class="gallery-table">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Photo</th>
+                        <th>video</th>
+
+                    </tr>
+                    <tr>
+                
+                
+                        <td class="name">
+                            
+                            <a href="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4" target="video">Priyank</a>
+                        </td>
+                        <td>
+                            Engineer Trainee
+                        </td>
+                        <td><img src="images/passportimage1.jpg"  border-radius: 20px; alt="not" > </td>
+
+                        <td>
+                            <iframe frameborder="0" width="80px" name="video" height="80px"></iframe>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="name">
+                            <!-- <a href="images/passportimage2.jpg" target="image2">Rahul</a> -->
+                            <a href="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4" target="video2" autoplay>Rahul</a>
+                        </td>
+                        <td>
+                            AWS Intern
+                        </td>
+                        <td><img src="images/passportimage2.jpg" alt="not" ></td>
+                       
+                        <td>
+                            <iframe frameborder="0" width="80px" name="video2" height="80px"></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="name">
+                            <!-- <a href="images/passportimage3.jpg" target="image3">Ramesh</a> -->
+                            <a href="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4" target="video3">Ramesh</a>
+                        </td>
+                        <td>
+                            Data Intern
+                        </td>
+                        <td><img src="images/passportimage3.jpg" alt="not" ></td>
+                      
+                        <td>
+                            <iframe frameborder="0" width="80px" name="video3" height="80px"></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="name">
+                            <!-- <a href="images/passportimage4.jpg" target="image4">Yash</a> -->
+                            <a href="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4" target="video4">Yash</a>
+                        </td>
+                        <td>
+                            Application Support
+                        </td>
+                        <td><img src="images/passportimage4.jpg" alt="not" ></td>
+                      
+                        <td>
+                            <iframe frameborder="0" width="80px" name="video4" height="80px"></iframe>
+                        </td>
+                    </tr>
+
+                </table>
+            </article>
+        </section>
+    </body>
+</html>
