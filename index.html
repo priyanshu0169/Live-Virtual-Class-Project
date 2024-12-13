@@ -6,52 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </head>
-<body>
-<header>
-    <div class="container">
-        <img src="images/images.jpeg" alt="Virtual class" style="width:100%;">
-        <div class="top-right"><p class="cursor typewriter-animation">LIVE VIRTUAL CLASSES</p></div>
-    </div>
-    
-    <nav>
-        <div class="navbar">
-            <a class="active" href="Home.html" target="frm1">Home</a>
-            <a href="All Courses.html" target="frm1">All Courses</a>
-            <a href="Registration.html" target="frm1">Registration</a>
-            <a href="Photo Gallery.html" target="frm1">Photo Gallery</a>
-            <a href="Blog.html" target="frm1">Blog</a>
-            <a href="#Help" target="frm1">Help</a>
-            <a href="#Conatct us" target="frm1">Conatct Us</a>
-        </div>
-    </nav>
 
-    
-</header>
- 
-<iframe name="frm1" width=100% height="600"></iframe>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/images.jpeg" alt="Virtual class" style="width:100%;">
+            <div class="top-right">
+                <p class="cursor typewriter-animation">LIVE VIRTUAL CLASSES</p>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="Home.html" target="frm1">Home <i class="fa fa-fw fa-home" aria-hidden="true"></i></a>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        All Courses
+                    </button>
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="dropdown-item" href="#">Action</li>
+                        <li class="dropdown-item" href="#">Another action</li>
+                        <li class="dropdown-item" href="#">Something else here</li>
+                        <li class="submenu submenu-md dropend">
+                            <a class="dropdown-item dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" onclick="event.stopPropagation();">
+                                Sub Menu
+                            </a>
+
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item">Sub item 1</a></li>
+                                <li><a class="dropdown-item">Sub item 2</a></li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item">Sub item 4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="Registration.html" target="frm1">Registration <i class="fa fa-registered"
+                        aria-hidden="true"></i></a>
+                <a href="Photo Gallery.html" target="frm1">Photo Gallery <i class="fa fa-picture-o"
+                        aria-hidden="true"></i></a>
+                <a href="Blog.html" target="frm1">Blog <i class="fa fa-rss-square" aria-hidden="true"></i></a>
+                <a href="#Help" target="frm1">Help <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                <a href="#Conatct us" target="frm1">Contact Us <i class="fa fa-fw fa-envelope"></i> </a>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <iframe name="frm1" src="Home.html" width=100% height="400"></iframe>
     <section>
-    <article class="text">
-        
+        <article class="text">
+
             <h1 class="text">
                 <p class="cursor typewriter-animation">Hi there, wellcome to LIVE VIRTUAL CLASSES!</p>
             </h1>
-        
-        
-    </article>
-    <article class="heading">
+
+
+        </article>
+        <!-- <article class="heading">
         <ul class="active">Most Important Courses for the professional</ul>
         <ul><a href="Mean stack.html" target="frm1">Mean stack</a></ul>
         <ul><a href="Mern stack.html" target="frm1">Mern stack</a></ul>
-        <ul><a href="Gen Ai.html" target="frm1">Gen Ai</a></ul>
-    </article>
-   
-</section>
-<footer>
-    <article class="footer">
-        <ul>Website Designed & Developed By : Priyanshu</ul>
-    </article>
-</footer>
+        <ul><a href="Gen Ai.html" target="frm1">Gen Ai</a></ul> -->
+        <div class="d-flex justify-content-around mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="images/images1.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mean stack</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="Mean stack.html" target="frm1" class="btn btn-primary">Read More...</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/images1.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mern stack</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="Mern stack.html" target="frm1" class="btn btn-primary">Read More...</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/images.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Gen Ai</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="Gen Ai.html" target="frm1" class="btn btn-primary">Read More...</a>
+                </div>
+            </div>
+        </div>
+        </article>
+
+
+    </section>
+    <footer>
+        <article class="footer">
+            <ul>Website Designed & Developed By : Priyanshu</ul>
+        </article>
+    </footer>
 </body>
+
 </html>

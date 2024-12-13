@@ -9,12 +9,21 @@
     right: 16px;
     color: aliceblue;
     font-size: 25px;
+    font-size: 5rem; 
+    text-shadow: 5px 5px 0px 		#1F51FF; 
 
   }
   .navbar{
   width: 100%;
+  background-color: #555;  
+}
+.navbar button{
+  width: 100%;
   background-color: #555;
-  overflow: auto;
+
+}
+.navbar button:hover {
+  background-color: #000;
 }
 .navbar a {
   float: left;
@@ -24,13 +33,25 @@
   font-size: 17px;
   width: 12%; 
   text-align: center; 
+  filter: drop-shadow(4px 4px 4px black);
+  word-spacing: normal;
 }
 
 .navbar a:hover {
   background-color: #000;
 }
 
+.navbar li {
+  color: aliceblue;
+}
+.navbar li:hover{
+  background-color: #000;
+  color: aliceblue;
+}
 
+ /* dropdown-menu{
+  background-color: #555;
+} */
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
@@ -43,9 +64,10 @@
 .text{
   text-align: center; 
   font-size: 50px;
+  margin-bottom: 11%;
 }
 
-.heading{
+/* .heading{
   width: 100%;
   background-color: #555;
 overflow: auto;
@@ -81,7 +103,7 @@ color: aliceblue;
 }
 a{
   color: white;
-}
+} */
 footer {
   text-align: center;
   padding: 50px;
