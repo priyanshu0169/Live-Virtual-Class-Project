@@ -68,13 +68,13 @@
 .text{
   text-align: center; 
   font-size: 50px;
-  margin-bottom: 11%;}
+  margin-bottom:10px;
+}
 footer {
   text-align: center;
   padding: 50px;
   background-color: #555;
   color: white;
-  font-size: 30px;
 }
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
