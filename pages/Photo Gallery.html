@@ -1,188 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <head>
-        <title>Live Virtual Class</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script> -->
-<style>
-    *{
-    margin: 0;
-    padding: 0;
-}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <style>
+        .photo-gallery {
+            color: #313437;
+            background-color: #fff;
+            padding: 40px 15px;
+        }
 
-body{
-    background-color: #e9f2f7;
-    min-height: 100vh;
-    overflow: auto;
-}
+        .photo-gallery h2 {
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: inherit;
+        }
 
-body::-webkit-scrollbar{
-    display: none;
-}
+        .photo-gallery .intro {
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
 
-h1{
-    font-size: 50px;
-}
+        .photo-gallery .intro p {
+            margin-bottom: 0;
+        }
 
-.gallery-head{
-    min-height: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: grey;
-}
+        .photo-gallery .photos {
+            padding-bottom: 20px;
+        }
 
-.gallery-table{
-    display: flex;
-    justify-content: center;
-}
+        .photo-gallery .item {
+            padding-bottom: 30px;
+        }
 
-table{
-    width: 75%;
-    min-width: 325px;
-    color: white;
-    margin-bottom: 5vh;
-}
+        table {
+            width: 100%;
+            color: #313437;
+            border-collapse: collapse;
+        }
 
-td, th{
-    text-align: center;
-    vertical-align: middle;
-}
+        th,
+        td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
 
-th{
-    padding: 10px 0px;
-    background-color: gray;
-    font-size: 22px;
-}
+        th {
+            background-color: #6c757d;
+            color: #fff;
+            font-size: 18px;
+        }
 
-a{
-    text-decoration: none;
-    color: white;
-}
+        td {
+            background-color: #f8f9fa;
+            font-size: 16px;
+        }
 
-td{
-    background-color: darkgray;
-    font-size: 18px;
-    filter: drop-shadow(4px 4px 4px black);
-}
+        .name:hover {
+            cursor: pointer;
+            background-color: #343a40;
+            color: white;
+        }
 
-.name:hover{
-    cursor: grab;
-    background-color: black;
-}
+        td img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
 
-.passport-img{
-    width: 80px;
+        td iframe {
+            border-radius: 10px;
+            max-width: 80px;
+            height: 80px;
+        }
 
-}
-td img{
-    border-radius: 10px;
-}
-td iframe{
-    border-radius: 10px;
-    padding: 5px;
-}
+        .photo-gallery .table-responsive {
+            overflow-x: auto;
+        }
 
-</style>
-    </head>
+        /* Lightbox image adjustments */
+        .lightbox-image {
+            width: 90% !important;
+            height: auto !important;
+            max-width: 800px;
+        }
 
-    <body>
-        <header class="gallery-head">
-            <h1>Photo Gallery</h1>
-        </header>
+        /* Responsive media query adjustments */
+        @media (max-width: 767px) {
+            .photo-gallery h2 {
+                margin-bottom: 25px;
+                font-size: 34px;
+            }
 
-        <section>
-            <article class="gallery-table">
-                <table>
+            table th,
+            table td {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            td iframe {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="photo-gallery">
+        <h2 class="text-center">Gallery</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
                     <tr>
                         <th>Name</th>
                         <th>Designation</th>
                         <th>Photo</th>
-                        <th>video</th>
+                        <th>Video</th>
+                    </tr>
+                </thead>
+                <tbody id="galleryTable"></tbody>
+            </table>
+        </div>
+    </div>
 
-                    </tr>
-                    <tr>
-                
-                
-                        <td class="name">
-                            
-                            <a href="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4" target="video">Priyank</a>
-                        </td>
-                        <td>
-                            Engineer Trainee
-                        </td>
-                        <td>
-                            <a href="images/passportimage1.jpg" data-lightbox="gallery" data-title="Priyank">
-                            <img src="images/passportimage1.jpg"  border-radius: 20px; alt="not" ></a>
-                        </td>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <script>
+        const data = [
+            {
+                name: 'Priyank',
+                designation: 'Engineer Trainee',
+                photo: '../images/passportimage1.jpg',
+                video: 'https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4'
+            },
+            {
+                name: 'Rahul',
+                designation: 'AWS Intern',
+                photo: '../images/passportimage2.jpg',
+                video: 'https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4'
+            },
+            {
+                name: 'Ramesh',
+                designation: 'Data Intern',
+                photo: '../images/passportimage3.jpg',
+                video: 'https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4'
+            },
+            {
+                name: 'Yash',
+                designation: 'Application Support',
+                photo: '../images/passportimage4.jpg',
+                video: 'https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4'
+            }
+        ];
 
-                        <td>
-                            <iframe frameborder="0" width="80px" name="video" height="80px"></iframe>
-                        </td>
+        const table = document.getElementById('galleryTable');
 
-                    </tr>
-                    <tr>
-                        <td class="name">
-                            <!-- <a href="images/passportimage2.jpg" target="image2">Rahul</a> -->
-                            <a href="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4" target="video2" autoplay>Rahul</a>
-                        </td>
-                        <td>
-                            AWS Intern
-                        </td>
-                        <td>
-                            <a href="images/passportimage2.jpg" data-lightbox="gallery" data-title="Rahul"></a>
-                            <img src="images/passportimage2.jpg" alt="not" >
-                        </td>
-                       
-                        <td>
-                            <iframe frameborder="0" width="80px" name="video2" height="80px"></iframe>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="name">
-                            <!-- <a href="images/passportimage3.jpg" target="image3">Ramesh</a> -->
-                            <a href="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4" target="video3">Ramesh</a>
-                        </td>
-                        <td>
-                            Data Intern
-                        </td>
-                        <td>
-                            <a href="images/passportimage3.jpg" data-lightbox="gallery" data-title="Ramesh"></a>
-                            <img src="images/passportimage3.jpg" alt="not" >
-                        </td>
-                      
-                        <td>
-                            <iframe frameborder="0" width="80px" name="video3" height="80px"></iframe>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="name">
-                            <!-- <a href="images/passportimage4.jpg" target="image4">Yash</a> -->
-                            <a href="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4" target="video4">Yash</a>
-                        </td>
-                        <td>
-                            Application Support
-                        </td>
-                        <td>
-                            <a href="images/passportimage4.jpg" data-lightbox="gallery" data-title="Yash"></a>
-                            <img src="images/passportimage4.jpg" alt="not" >
-                        </td>
-                      
-                        <td>
-                            <iframe frameborder="0" width="80px" name="video4" height="80px"></iframe>
-                        </td>
-                    </tr>
+        data.forEach(person => {
+            const row = `
+                <tr>
+                    <td class="name">
+                        <a href="${person.video}" target="_blank">${person.name}</a>
+                    </td>
+                    <td>${person.designation}</td>
+                    <td>
+                        <a href="${person.photo}" data-lightbox="gallery" data-title="${person.name}">
+                            <img src="${person.photo}" class="passport-img img-fluid" alt="not" >
+                        </a>
+                    </td>
+                    <td>
+                        <iframe frameborder="0" width="80px" height="80px" src="${person.video}" class="video-frame"></iframe>
+                    </td>
+                </tr>
+            `;
+            table.innerHTML += row;
+        });
+    </script>
+</body>
 
-                </table>
-            </article>
-        </section>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    </body>
 </html>
