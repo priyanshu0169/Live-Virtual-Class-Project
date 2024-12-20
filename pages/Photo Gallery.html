@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
         .photo-gallery {
             color: #313437;
             background-color: #fff;
@@ -61,6 +65,10 @@
         td {
             background-color: #f8f9fa;
             font-size: 16px;
+        }
+
+        .lb-image {
+            width: clamp(280px,40vw,350px) !important;
         }
 
         .name:hover {
@@ -139,7 +147,7 @@
             {
                 name: 'Priyank',
                 designation: 'Engineer Trainee',
-                photo: '../images/passportimage1.jpg',
+                photo: '../images/photo24.jpg',
                 video: 'https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4'
             },
             {
