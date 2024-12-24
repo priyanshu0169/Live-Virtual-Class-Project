@@ -82,20 +82,41 @@
       padding: 10px;
     }
   </style>
+  
+  <script>
+    function validateForm() {
+    let x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  
+    let y = document.forms["myForm"]["lname"].value;
+    if (y == "") {
+      alert("Last name must be filled out");
+      return false;
+    }
+    let z = document.forms["myForm"]["subject"].value;
+    if (z == ""|| z.length<6) {
+      alert("Remarks should not be less than 6 letters");
+      return false;
+    }
+  }
+  </script>
 </head>
 
 <body>
   <article class="form mb-4 py-5">
     <h1>Registration Form</h1>
     <div class="container">
-      <form action="/action_page.php">
+       <form name="myForm" form action="thanks.html" onsubmit="return validateForm()">
         <div class="row">
           <div class="col-25">
             <label for="fname">First Name
             </label>
           </div>
           <div class="col-75">
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." >
           </div>
         </div>
         <div class="row">
