@@ -1,0 +1,172 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+            border-radius: 20px;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+            border-radius: 20px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+            border-radius: 20px;
+        }
+
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function displayMarks() {
+
+
+            var englishMarks = parseFloat(document.getElementById("english").value || 0);
+            var mathsMarks = parseFloat(document.getElementById("maths").value || 0);
+            var scienceMarks = parseFloat(document.getElementById("science").value || 0);
+
+            var avgMarks = (englishMarks + mathsMarks + scienceMarks) / 3;
+
+            var marks = document.getElementById("course").value
+            var scholarship = 100000;
+            if (avgMarks >= 90 && marks >= 90) {
+                alert('Got 50% scholarship = '+   0.50*scholarship)
+            } else if (avgMarks > 80 && marks > 80 && avgMarks < 90 && marks <90) {
+                alert('Got 25% scholarship = '+ 0.25*scholarship)
+            } else {
+                alert('No scholarship = ' + "Zero")
+            }
+        }
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <article class="form mb-4 py-5">
+        <h1>Scholarship program</h1>
+        <div class="container">
+            <form name="myForm" onsubmit="return displayMarks()">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Full Name
+                        </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="course">Marks in 10th grade</label>
+                        </div>
+
+                        <div class="col-75">
+                            <label for="lname">English :</label>
+                            <input type="number" id="english" name="english" placeholder="Your marks">
+                            <label for="lname">Maths :</label>
+                            <input type="number" id="maths" name="maths" placeholder="Your marks">
+                            <label for="lname">Science :</label>
+                            <input type="number" id="science" name="science" placeholder="Your marks">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="course">Marks in 12th grade</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="course" name="course">
+                            <option value="95">Greater than or equal to 90</option>
+                            <!-- <option value="85">Less than 90</option> -->
+                            <option value="85">Greater than or equal to 80</option>
+                            <option value="75">Less than 80</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Got Scholarship?</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                            style="height:200px"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+</body>
+
+</html>
