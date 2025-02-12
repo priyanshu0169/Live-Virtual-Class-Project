@@ -1,0 +1,144 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .form {
+    box-sizing: border-box;
+  }
+
+  input[type=text],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  input[type=button] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+
+  input[type=button]:hover {
+    background-color: #45a049;
+    border-radius: 20px;
+  }
+
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    border-radius: 20px;
+  }
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+    border-radius: 20px;
+  }
+
+
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    color: black;
+    padding: 10px;
+    background-color: grey;
+  }
+</style>
+<script>
+  function displayMarks() {
+
+
+    var correct1 = document.getElementById("static1").checked;
+    var correct2 = document.getElementById("dynamic").checked;
+    var marks = 0;
+    if (correct1) {
+      marks += 2;
+    }
+    if (correct2) {
+      marks += 2;
+    }
+    alert('marks = ' + marks);
+  }
+</script>
+
+<body>
+  <article class="form mb-4 py-5">
+    <h1>Multiple Questions and Answers</h1>
+    <div class="container">
+      <form name="myForm" form action="thanks.html">
+        <div class="col-25">
+          <label for="subject">1. HTML is used for ?</label>
+        </div>
+        <div class="col-75">
+          <input type="radio" id="static1" name="fav_language" value="static">
+          <label for="static">Static</label><br>
+          <input type="radio" id="dynamic1" name="fav_language" value="dynamic">
+          <label for="dynamic">Dynamic</label><br>
+          <input type="radio" id="both1" name="fav_language" value="both">
+          <label for="both">Both of the above</label>
+          <br><input type="radio" id="none1" name="fav_language" value="none">
+          <label for="none">None of the above</label>
+        </div>
+        <br>
+        <div class="col-25">
+          <br> <label for="subject">2. CSS is used for ?</label>
+        </div>
+        <div class="col-75">
+          <br> <input type="radio" id="static" name="fav_language1" value="static">
+          <label for="static">static</label><br>
+          <input type="radio" id="dynamic" name="fav_language1" value="dynamic">
+          <label for="dynamic">Dynamic</label><br>
+          <input type="radio" id="both" name="fav_language1" value="both">
+          <label for="both">Both of the above</label>
+          <br><input type="radio" id="none" name="fav_language1" value="none">
+          <label for="none">None of the above</label>
+        </div>
+        <div class="row">
+          <input type="button" value="Submit" onclick="displayMarks()">
+        </div>
+      </form>
+    </div>
+</body>
+
+</html>

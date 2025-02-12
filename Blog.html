@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./pages/loadComponents.js"></script>
   <style>
     iframe {
       padding: 10px;
@@ -18,6 +19,7 @@
       flex-direction: row;
       justify-content: space-evenly;
       background-color: #555;
+      /* margin-top: 12%; */
     }
 
     .navbar a {
@@ -28,7 +30,8 @@
       font-size: 17px;
       width: 12%;
       text-align: center;
-      /* filter: drop-shadow(4px 4px 4px black); */
+      filter: drop-shadow(4px 4px 4px black);
+      /* margin-top: 15%; */
     }
 
     .navbar a:hover {
@@ -44,21 +47,23 @@
       }
     }
   </style>
-     
+
 </head>
 
-<body>
+<body onload="putheaderandfooter()">
+  <!-- <div id="nav-placeholder"></div> -->
   <nav>
     <div class="navbar">
-      <a href="../blogs/Ai.html" target="frm2" class="active">AI<i class="fa-solid fa-hexagon-nodes-bolt"></i></a>
-      <a href="../blogs/Gen ai.html" target="frm2">Gen AI<i class="fa-solid fa-copyright"></i></a>
-      <a href="../blogs/LLM.html" target="frm2">LLM</a>
-      <a href="../blogs/DL.html" target="frm2">DL</a>
-      <a href="../blogs/Copilot.html" target="frm2">Copilot</a>
+      <a href="../blogs/Ai.html" class="active">AI<i class="fa-solid fa-hexagon-nodes-bolt"></i></a>
+      <a href="../blogs/Gen ai.html">Gen AI<i class="fa-solid fa-copyright"></i></a>
+      <a href="../blogs/LLM.html">LLM <i class="fa fa-fw fa-home" aria-hidden="true"></i></a>
+      <a href="../blogs/DL.html">DL <i class="fa-solid fa-hexagon-nodes-bolt"></i></a>
+      <a href="../blogs/Copilot.html">Copilot <i class="fa-solid fa-hexagon-nodes-bolt" aria-hidden="true"></i></a>
     </div>
   </nav>
 
   <iframe name="frm2" width="100%" src="../blogs/Ai.html" height="90%"></iframe>
+  <div id="footer-placeholder"></div>
 </body>
 
 </html>

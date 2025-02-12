@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Virtual Class</title>
+    <script src="js/bootstrap.js"></script>
+    <script src="./pages/loadComponents.js" defer></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1fde1;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-Main {
+            background-color: grey;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            text-align: center;
+            color: #333;
+            text-shadow: 2px 2px grey;
+            margin-top: 4.5%;
+            margin-bottom: 5%;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 0 auto;
+            padding: 17px;
+        }
+
+        .inner-container,
+        .inner-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 300px;
+            max-width: 700px;
+
+        }
+
+        .inner-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 430px;
+            margin-bottom: 15%;
+        }
+
+        .inner-container p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        iframe {
+            border-radius: 10px;
+            border: 0;
+            max-width: 100%;
+            margin: 5%;
+        }
+
+        .form2 {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cnt {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .txt {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: none;
+        }
+
+        .rg-btn {
+            display: flex;
+            flex-direction: row;
+            gap: 2px;
+        }
+
+        .rg-btn .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #6c9f33;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .rg-btn .btn:hover {
+            background-color: #588026;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <script>
+        function jfun5() {
+      putheaderandfooter();
+
+    }
+    </script>
+</head>
+
+<body onload="jfun5()">
+    <div id="nav-placeholder"></div>
+    <div class="contact-Main">
+        <h1>CONTACT US</h1>
+    </div>
+    <div class="container">
+        <div class="inner-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6000537676073!2d77.68607057418862!3d12.997413114313682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16837f54dbc9%3A0xbed84d37fcf010ca!2sImpelsys!5e0!3m2!1sen!2sin!4v1733466963898!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="vl"></div>
+        <div class="inner-form">
+            <form class="form2" name="frm1" onsubmit="return validatecontact()" action="thankyou.html">
+                <h1 class="cnt-head">Tell us Something!</h1>
+                <input type="text" class="cnt" placeholder="Enter your name" name="name">
+                <input type="text" class="cnt" placeholder="Enter your email" name="email">
+
+                <textarea name="tx" class="txt" rows="5" cols="5" placeholder="Tell us something!"></textarea>
+
+                <div class="rg-btn">
+                    <input type="submit" class="btn">
+                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Get Address
+                    </button> -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Address</h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Impelsys
+                        Survey.No.192, IWF Campus, <br>Whitefield Main Rd, B Narayanapura,
+                        <br> Mahadevapura, Bengaluru, Karnataka 560016
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

@@ -7,17 +7,26 @@
     <title>Photo Gallery</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-    <style>
+    <script src="./pages/loadComponents.js" defer></script>
+   <style>
         video, img {
             height: 150px;
             width: 150px;
         }
     </style>
+    <script>
+         function jfun5() {
+      putheaderandfooter();
+
+    }
+    </script>
 </head>
 
-<body>
+<body onload="jfun5()">
+
+    <div id="nav-placeholder"></div>
     <div class="container py-5">
-        <h2 class="text-center mb-4">Gallery</h2>
+        <h2 class="text-center mt-5 mb-4">Gallery</h2>
 
         <div class="table-responsive">
             <table class="table table-bordered table-hover">
@@ -92,6 +101,7 @@
             table.innerHTML += row;
         });
     </script>
+    <div id="footer-placeholder"></div>
 </body>
 
 </html>
